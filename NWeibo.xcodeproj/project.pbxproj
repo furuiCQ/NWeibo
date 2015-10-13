@@ -15,6 +15,7 @@
 		491275DB1BC9F2C6002BCCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491275D91BC9F2C6002BCCE9 /* LaunchScreen.storyboard */; };
 		491275E61BC9F2C6002BCCE9 /* NWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 491275E51BC9F2C6002BCCE9 /* NWeiboTests.m */; };
 		491275F11BC9F2C6002BCCE9 /* NWeiboUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 491275F01BC9F2C6002BCCE9 /* NWeiboUITests.m */; };
+		49866F041BCD346B00DA1FA4 /* MainTaberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49866F031BCD346B00DA1FA4 /* MainTaberViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2EA82CF38BC539A64B17BCC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F8EB93F85459F7AF4614DE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		491275EC1BC9F2C6002BCCE9 /* NWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		491275F01BC9F2C6002BCCE9 /* NWeiboUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NWeiboUITests.m; sourceTree = "<group>"; };
 		491275F21BC9F2C6002BCCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49866F021BCD345600DA1FA4 /* MainTaberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTaberViewController.h; sourceTree = "<group>"; };
+		49866F031BCD346B00DA1FA4 /* MainTaberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTaberViewController.m; sourceTree = "<group>"; };
 		98F8EB93F85459F7AF4614DE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F980B5FD561BA167A9CBCC7F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +111,7 @@
 		491275CA1BC9F2C6002BCCE9 /* NWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				49866EED1BCD32D900DA1FA4 /* MainViewController */,
 				491275CE1BC9F2C6002BCCE9 /* AppDelegate.h */,
 				491275CF1BC9F2C6002BCCE9 /* AppDelegate.m */,
 				491275D11BC9F2C6002BCCE9 /* ViewController.h */,
@@ -145,6 +149,15 @@
 				491275F21BC9F2C6002BCCE9 /* Info.plist */,
 			);
 			path = NWeiboUITests;
+			sourceTree = "<group>";
+		};
+		49866EED1BCD32D900DA1FA4 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				49866F021BCD345600DA1FA4 /* MainTaberViewController.h */,
+				49866F031BCD346B00DA1FA4 /* MainTaberViewController.m */,
+			);
+			name = MainViewController;
 			sourceTree = "<group>";
 		};
 		5446DF71317C2DA94C7FA9D9 /* Frameworks */ = {
@@ -347,6 +360,7 @@
 			files = (
 				491275D31BC9F2C6002BCCE9 /* ViewController.m in Sources */,
 				491275D01BC9F2C6002BCCE9 /* AppDelegate.m in Sources */,
+				49866F041BCD346B00DA1FA4 /* MainTaberViewController.m in Sources */,
 				491275CD1BC9F2C6002BCCE9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,10 @@
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:@"3373311973"];
     
+    MainTaberViewController *mtvc=[[MainTaberViewController alloc]init];
+    self.window.rootViewController=mtvc;
+    
+    
     
     return YES;
 }

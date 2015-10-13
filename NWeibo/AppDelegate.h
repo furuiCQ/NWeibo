@@ -6,6 +6,7 @@
 //  Copyright © 2015年 furui. All rights reserved.
 //
 #import "WeiboSDK.h"
+#import "MainTaberViewController.h"
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
