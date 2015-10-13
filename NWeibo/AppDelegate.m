@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:@"3373311973"];
+    
+    
     return YES;
 }
 

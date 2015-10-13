@@ -5,7 +5,7 @@
 //  Created by furui on 15/10/11.
 //  Copyright © 2015年 furui. All rights reserved.
 //
-
+#import "WeiboSDK.h"
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
