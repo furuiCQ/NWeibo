@@ -24,7 +24,7 @@
     [self.view setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:loginButton];
     // Do any additional setup after loading the view, typically from a nib.
-}
+}		
 -(void)login{
     WBAuthorizeRequest *request=[WBAuthorizeRequest request];
     request.redirectURI=@"http://www.sina.com";

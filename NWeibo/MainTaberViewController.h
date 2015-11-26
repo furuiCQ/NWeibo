@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 
 @interface  MainTaberViewController : UITabBarController
-{
-    
-}
+@property(strong,nonatomic) NSMutableSet *viewControllMutable;
+
 @end

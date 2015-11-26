@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,14 @@
     [WeiboSDK registerApp:@"3373311973"];
     
     MainTaberViewController *mtvc=[[MainTaberViewController alloc]init];
+    
+    HomeViewController *homeviewController=[[HomeViewController alloc]init];
+    
+    HomeViewController *homeviewController2=[[HomeViewController alloc]init];
+    
+    [mtvc setViewControllers:[NSArray arrayWithObjects:homeviewController, homeviewController2, nil]];
+   
+    
     self.window.rootViewController=mtvc;
     
     
