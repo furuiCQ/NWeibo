@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		10FAADF41C06C8CD00DE18F9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FAADF31C06C8CD00DE18F9 /* HomeViewController.m */; };
+		10FAADFD1C06D7F100DE18F9 /* demo.css in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADF61C06D7F100DE18F9 /* demo.css */; };
+		10FAADFE1C06D7F100DE18F9 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADF71C06D7F100DE18F9 /* demo.html */; };
+		10FAADFF1C06D7F100DE18F9 /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADF81C06D7F100DE18F9 /* iconfont.css */; };
+		10FAAE001C06D7F100DE18F9 /* iconfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADF91C06D7F100DE18F9 /* iconfont.eot */; };
+		10FAAE011C06D7F100DE18F9 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADFA1C06D7F100DE18F9 /* iconfont.svg */; };
+		10FAAE021C06D7F100DE18F9 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADFB1C06D7F100DE18F9 /* iconfont.ttf */; };
+		10FAAE031C06D7F100DE18F9 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 10FAADFC1C06D7F100DE18F9 /* iconfont.woff */; };
 		491275CD1BC9F2C6002BCCE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 491275CC1BC9F2C6002BCCE9 /* main.m */; };
 		491275D01BC9F2C6002BCCE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 491275CF1BC9F2C6002BCCE9 /* AppDelegate.m */; };
 		491275D31BC9F2C6002BCCE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491275D21BC9F2C6002BCCE9 /* ViewController.m */; };
@@ -40,6 +47,13 @@
 /* Begin PBXFileReference section */
 		10FAADF21C06C86300DE18F9 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		10FAADF31C06C8CD00DE18F9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		10FAADF61C06D7F100DE18F9 /* demo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demo.css; sourceTree = "<group>"; };
+		10FAADF71C06D7F100DE18F9 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		10FAADF81C06D7F100DE18F9 /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
+		10FAADF91C06D7F100DE18F9 /* iconfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.eot; sourceTree = "<group>"; };
+		10FAADFA1C06D7F100DE18F9 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
+		10FAADFB1C06D7F100DE18F9 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		10FAADFC1C06D7F100DE18F9 /* iconfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff; sourceTree = "<group>"; };
 		3B77AE6E8E847F630B3E9479 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		491275C81BC9F2C6002BCCE9 /* NWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491275CC1BC9F2C6002BCCE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +103,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10FAADF51C06D7C600DE18F9 /* iconfont */ = {
+			isa = PBXGroup;
+			children = (
+				10FAADF61C06D7F100DE18F9 /* demo.css */,
+				10FAADF71C06D7F100DE18F9 /* demo.html */,
+				10FAADF81C06D7F100DE18F9 /* iconfont.css */,
+				10FAADF91C06D7F100DE18F9 /* iconfont.eot */,
+				10FAADFA1C06D7F100DE18F9 /* iconfont.svg */,
+				10FAADFB1C06D7F100DE18F9 /* iconfont.ttf */,
+				10FAADFC1C06D7F100DE18F9 /* iconfont.woff */,
+			);
+			name = iconfont;
+			sourceTree = "<group>";
+		};
 		491275BF1BC9F2C6002BCCE9 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +142,7 @@
 		491275CA1BC9F2C6002BCCE9 /* NWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				10FAADF51C06D7C600DE18F9 /* iconfont */,
 				49866EED1BCD32D900DA1FA4 /* MainViewController */,
 				491275CE1BC9F2C6002BCCE9 /* AppDelegate.h */,
 				491275CF1BC9F2C6002BCCE9 /* AppDelegate.m */,
@@ -288,9 +317,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FAAE001C06D7F100DE18F9 /* iconfont.eot in Resources */,
+				10FAADFD1C06D7F100DE18F9 /* demo.css in Resources */,
+				10FAAE021C06D7F100DE18F9 /* iconfont.ttf in Resources */,
+				10FAAE011C06D7F100DE18F9 /* iconfont.svg in Resources */,
 				491275DB1BC9F2C6002BCCE9 /* LaunchScreen.storyboard in Resources */,
 				491275D81BC9F2C6002BCCE9 /* Assets.xcassets in Resources */,
 				491275D61BC9F2C6002BCCE9 /* Main.storyboard in Resources */,
+				10FAAE031C06D7F100DE18F9 /* iconfont.woff in Resources */,
+				10FAADFE1C06D7F100DE18F9 /* demo.html in Resources */,
+				10FAADFF1C06D7F100DE18F9 /* iconfont.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
