@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "BottomBtn.h"
 
 @interface  MainTaberViewController : UITabBarController
-@property(strong,nonatomic) NSMutableSet *viewControllMutable;
+@property(strong,nonatomic) NSMutableArray *viewControllArray;
 
 @end

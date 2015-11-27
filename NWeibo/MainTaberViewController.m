@@ -15,11 +15,12 @@
 
 @implementation MainTaberViewController
 
-@synthesize viewControllMutable;
+@synthesize viewControllArray;
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    viewControllArray=[[NSMutableArray alloc]init];
     [self visibleTabBar];
     [self initCustomNavItem];
     [self initCustomTabBar];
@@ -49,86 +50,33 @@
     [self.view addSubview:topView];
     
 }
--(void)onClick:(UIControl *)control
-{
-    NSLog(@"点击底部按钮");
+-(void)onClick:(id)sender
+{    BottomBtn *btn=(BottomBtn *)sender	;
+		
+    if([btn.text isEqualToString:@""]){
+        NSLog(@"点击按钮%ld",(long)btn.tag);
+    }else{
+        
+        NSLog(@"点击底部按钮%ld",(long)btn.tag);
+        for (NSObject *object in viewControllArray) {
+            BottomBtn *b=(BottomBtn *)object;
+            if(b.tag!=btn.tag &&b.tag!=2){
+                [b setTextColor:[UIColor blackColor]];
+            }
+        }
+        [btn setTextColor:[UIColor orangeColor]];
+        if(btn.tag>2){
+            self.selectedIndex=btn.tag-1;
+        }else{
+            self.selectedIndex=btn.tag;
+        }
+     
+ 
+    }
 }
 -(void)initCustomTabBar
 {
     [self initBottomBtn:self.tabBar.frame.size itemNumb:5];
-   
-    
- /*   UIFont *font=[UIFont fontWithName:@"iconfont" size:20];
-    UIColor *textColor=[UIColor blackColor];
-    
-    UIControl *Btn1View=[[UIControl alloc]initWithFrame:CGRectMake(0, 5, self.tabBar.frame.size.width/5, self.tabBar.frame.size.height-10)];
-    [Btn1View setBackgroundColor:[UIColor greenColor]];
-    [Btn1View addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [tabBarBackgroundView addSubview:Btn1View];
-    
-    UILabel *icon1Label=[[UILabel alloc]initWithFrame:CGRectMake(10, 5, Btn1View.frame.size.width/2, Btn1View.frame.size.height/2)];
-    [icon1Label setText:@"\U000f004a"];
-    [icon1Label setFont:font];
-    [icon1Label setTextColor:textColor];
-    [Btn1View addSubview:icon1Label];
-    
-    
-    UIControl *Btn2View=[[UIControl alloc]initWithFrame:CGRectMake(self.tabBar.frame.size.width/5, 5, self.tabBar.frame.size.width/5, self.tabBar.frame.size.height-10)];
-    [Btn2View addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [Btn2View setBackgroundColor:[UIColor greenColor]];
-
-    [tabBarBackgroundView addSubview:Btn2View];
-    
-    UILabel *icon2Label=[[UILabel alloc]initWithFrame:CGRectMake(10, 5, Btn1View.frame.size.width/2, Btn1View.frame.size.height/2)];
-    [icon2Label setText:@"\U0000e644"];
-    [icon2Label setFont:font];
-    [icon2Label setTextColor:textColor];
-    [Btn2View addSubview:icon2Label];
-    
-    
-    UIControl *Btn3View=[[UIControl alloc]initWithFrame:CGRectMake(self.tabBar.frame.size.width*2/5, 5, self.tabBar.frame.size.width/5, self.tabBar.frame.size.height-10)];
-    [Btn3View setBackgroundColor:[UIColor greenColor]];
-    [Btn3View addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [tabBarBackgroundView addSubview:Btn3View];
-    
-    UILabel *icon3Label=[[UILabel alloc]initWithFrame:CGRectMake(10, 5, Btn1View.frame.size.width/2, Btn1View.frame.size.height/2)];
-    [icon3Label setText:@"\U0000e62d"];
-    [icon3Label setFont:font];
-    [icon3Label setTextColor:textColor];
-    [Btn3View addSubview:icon3Label];
-    
-    
-    
-    UIControl *Btn4View=[[UIControl alloc]initWithFrame:CGRectMake(self.tabBar.frame.size.width*3/5, 5, self.tabBar.frame.size.width/5, self.tabBar.frame.size.height-10)];
-    [Btn4View setBackgroundColor:[UIColor greenColor]];
-    [Btn4View addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [tabBarBackgroundView addSubview:Btn4View];
-    
-    UILabel *icon4Label=[[UILabel alloc]initWithFrame:CGRectMake(10, 5, Btn1View.frame.size.width/2, Btn1View.frame.size.height/2)];
-    [icon4Label setText:@"\U0000e662"];
-    [icon4Label setFont:font];
-    [icon4Label setTextColor:textColor];
-    [Btn4View addSubview:icon4Label];
-    
-    
-    
-    UIControl *Btn5View=[[UIControl alloc]initWithFrame:CGRectMake(self.tabBar.frame.size.width*4/5, 5, self.tabBar.frame.size.width/5, self.tabBar.frame.size.height-10)];
-    [Btn5View addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [Btn5View setBackgroundColor:[UIColor greenColor]];
-
-    [tabBarBackgroundView addSubview:Btn5View];
-    
-    UILabel *icon5Label=[[UILabel alloc]initWithFrame:CGRectMake(10, 5, Btn5View.frame.size.width/2, Btn5View.frame.size.height/2)];
-    [icon5Label setText:@"\U0000e67a"];
-    [icon5Label setFont:font];
-    [icon5Label setTextColor:textColor];
-    [Btn5View addSubview:icon5Label];
-    
-    
-    [self.view addSubview:tabBarBackgroundView];
-    */
-    
-    
 }
 -(void)initBottomBtn:(CGSize)size itemNumb:(int)numb
 {
@@ -146,38 +94,18 @@
     UIColor *textColor=[UIColor blackColor];
     
     for (int i=0; i<numb; i++) {
-        UIControl *btnView=[[UIControl alloc]initWithFrame:CGRectMake(btnwidth*i/5+1, 1, btnwidth/5-2, btnhegiht-2)];
+        BottomBtn *btnView=[[BottomBtn alloc]initWithFrame:CGRectMake(btnwidth*i/5+1, 1, btnwidth/5-2, btnhegiht-2)];
         [btnView addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [btnView setTag:i];
+        [btnView setIcon:[iconArray objectAtIndex:i]];
+        [btnView setText:[textArray objectAtIndex:i]];
+        [btnView setIconColor:textColor];
+        [btnView setTextColor:textColor];
+        [btnView setIconFont:font];
+        [btnView setTextFont:[UIFont systemFontOfSize:15]];
+        [btnView initView];
         [tabBarBackgroundView addSubview:btnView];
-        
-        if(![[textArray objectAtIndex:i] isEqualToString:@""]){
-            UILabel *iconLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 1, btnView.frame.size.width, btnView.frame.size.height*2/3)];
-            [iconLabel setText:[iconArray objectAtIndex:i]];
-            [iconLabel setFont:font];
-            [iconLabel setTextAlignment:UITextAlignmentCenter];
-            [iconLabel setTextColor:textColor];
-            [btnView addSubview:iconLabel];
-            
-            UILabel *textLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 1+btnView.frame.size.height*2/3, btnView.frame.size.width, btnView.frame.size.height/3-1)];
-            [textLabel setText:[textArray objectAtIndex:i]];
-            [textLabel setTextAlignment:UITextAlignmentCenter];
-            [textLabel setFont:[UIFont systemFontOfSize:15]];
-            [textLabel setTextColor:textColor];
-            [btnView addSubview:textLabel];
-
-        }else{
-            UILabel *iconLabel=[[UILabel alloc]initWithFrame:CGRectMake(btnView.frame.size.width/8, 2, btnView.frame.size.width*3/4, btnView.frame.size.height-4)];
-            [iconLabel setText:[iconArray objectAtIndex:i]];
-            [iconLabel setFont:font];
-            [iconLabel setTextAlignment:UITextAlignmentCenter];
-            [iconLabel setBackgroundColor:[UIColor orangeColor]];
-            [iconLabel setTextColor:[UIColor whiteColor]];
-            iconLabel.layer.cornerRadius=5;
-            iconLabel.layer.masksToBounds=YES;
-            [btnView addSubview:iconLabel];
-
-        }
+        [viewControllArray addObject:btnView];
     }
     
     

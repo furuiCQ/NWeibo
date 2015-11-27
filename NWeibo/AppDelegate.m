@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-
+#import "MessageViewController.h"
+#import "DiscoverViewController.h"
+#import "MineViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -25,9 +27,13 @@
     
     HomeViewController *homeviewController=[[HomeViewController alloc]init];
     
-    HomeViewController *homeviewController2=[[HomeViewController alloc]init];
+    MessageViewController *messageViewController=[[MessageViewController alloc]init];
     
-    [mtvc setViewControllers:[NSArray arrayWithObjects:homeviewController, homeviewController2, nil]];
+    DiscoverViewController *discoverViewController=[[DiscoverViewController alloc]init];
+    
+    MineViewController *mineViewController=[[MineViewController alloc]init];
+    
+    [mtvc setViewControllers:[NSArray arrayWithObjects:homeviewController, messageViewController,discoverViewController,mineViewController, nil]];
    
     
     self.window.rootViewController=mtvc;
